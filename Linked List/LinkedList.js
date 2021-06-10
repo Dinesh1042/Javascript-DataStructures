@@ -21,9 +21,9 @@ class LinkedList {
   }
 
   append(value) {
-    if (!value)
+    if (!value.toString().trim(""))
       throw new Error(
-        `Object.prepend requires at least 1 argument, but only 0 were passed`
+        `Object.append requires at least 1 argument, but only 0 were passed`
       );
 
     const newNode = new Node(value);
@@ -41,7 +41,7 @@ class LinkedList {
   }
 
   prepend(value) {
-    if (!value)
+    if (!value.toString().trim(""))
       throw new Error(
         `Object.prepend requires at least 1 argument, but only 0 were passed`
       );
@@ -72,9 +72,9 @@ class LinkedList {
 
   remove(value) {
     if (!this.head) throw new Error(`Linkedlist is Empty!`);
-    if (!value)
+    if (!value.toString().trim(""))
       throw new Error(
-        `Object.prepend requires at least 1 argument, but only 0 were passed`
+        `Object.remove requires at least 1 argument, but only 0 were passed`
       );
 
     while (this.head && this.head.value === value) this.head = this.head.next;
@@ -148,10 +148,32 @@ class LinkedList {
     else return undefined;
   }
 
+  fill(value, startValue = null, endValue = null) {
+    let currentNode = this.head;
+
+    let isLoopStarted = false;
+    let isStartValueInList = null;
+    let isEndValueInList = null;
+    if (startValue && endValue) {
+      isStartValueInList = this.find(startValue);
+      isEndValueInList = this.find(endValue);
+    }
+
+    while (currentNode) {
+      if (!startValue && !endValue && value) currentNode.value = value;
+      else if (isStartValueInList && isEndValueInList) {
+        if (currentNode.value === startValue) isLoopStarted = true;
+        if (currentNode.value === endValue) isLoopStarted = false;
+        if (isLoopStarted) currentNode.value = value;
+      }
+      currentNode = currentNode.next;
+    }
+  }
+
   includes(value) {
-    if (!value)
+    if (!value.toString().trim(""))
       throw new Error(
-        `Object.prepend requires at least 1 argument, but only 0 were passed`
+        `Object.includes requires at least 1 argument, but only 0 were passed`
       );
     return this.find(value) ? true : false;
   }
