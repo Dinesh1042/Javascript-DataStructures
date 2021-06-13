@@ -10,11 +10,12 @@ A data structure is a particular way of organizing data in a computer so that it
 
 ## Data Structure
 
-| S.no | Name                          |
-| ---- | ----------------------------- |
-| 1    | [LinkedList](./Linked%20List) |
-| 2    | [Stack](./stack)              |
-| 3    | [Queue](./Queue)              |
+| S.no | Name                                           |
+| ---- | ---------------------------------------------- |
+| 1    | [LinkedList](./Linked%20List)                  |
+| 2    | [Stack](./stack)                               |
+| 3    | [Queue](./Queue)                               |
+| 4    | [Binary Search Tree](./Binary%20Search%20Tree) |
 
 ---
 
