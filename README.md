@@ -16,6 +16,7 @@ A data structure is a particular way of organizing data in a computer so that it
 | 2    | [Stack](./stack)                               |
 | 3    | [Queue](./Queue)                               |
 | 4    | [Binary Search Tree](./Binary%20Search%20Tree) |
+| 5    | [Hash Table](./Hash%20Table)                   |
 
 ---
 
